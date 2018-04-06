@@ -197,20 +197,21 @@ public class IdealWeight extends javax.swing.JFrame {
         double bmi;
         name = inputName.getText();
         height = Double.parseDouble(inputHeight.getText());
+        
         // this is to round the calculations
         DecimalFormat x = new DecimalFormat ("##.##");
         DecimalFormat y = new DecimalFormat ("##.#");
-        //the calculations if the metric system is chosen
         
         // this decides if the user chose i or m
         String systemMeasure = inputSystem.getText();
         switch (systemMeasure)
-        {
+        {   //the calculations if the metric system is chosen
             case "M":
               weight = height * height * 25;
               bmi = (weight)/(height * height);
               outputWeight.setText(name + " 's " + "ideal weight is " + x.format (weight) + "kgs" + " or a bmi of " + " 18.5 - " + y.format (bmi));
               break;
+            // the calculations if the imperial system is chosen
             case "I":
               weight = (height * height * 25)/703;
               bmi = (weight * 703)/(height * height);
@@ -221,8 +222,8 @@ public class IdealWeight extends javax.swing.JFrame {
         }
         /*
           the switch case calculates the variable "weight" and sets it to a -
-          rounded value of 2 decimals. A message is sent to a label alongside -
-          the variable weight, depending on the system chosen
+          value of 2 decimals. A message is sent to a label alongside -
+          the variable weight, depending on the switch case.
         */
         
         
