@@ -217,7 +217,7 @@ public class IdealWeight extends javax.swing.JFrame {
               outputWeight.setText(name + " 's " + "ideal weight is " + x.format (weight) + "lbs" + " or a bmi of " + " 18.5 - " + y.format (bmi));
               break;
             default:
-                outputWeight.setText("0");
+                outputWeight.setText("Error " + "'" + systemMeasure + "'" + " unit is unavailable");
         }
         /*
           the switch case calculates the variable "weight" and sets it to a -
